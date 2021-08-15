@@ -1,14 +1,14 @@
 <?php
 
-$kalimat1="Selamat";
-$kalimat2="pagi pagi";
 
-$hasil1=strlen($kalimat1);
-$hasil2=strlen($kalimat2);
+$kalimat = isset($_GET['kalimat'])?$_GET['kalimat']:'';
 
-echo "Jumlah karakter 1: $hasil1";
-echo "<br>";
-echo "Jumlah karakter 2: $hasil2";
-
+if(!empty($kalimat))
+{
+ $jmlchar = strlen($kalimat);
+ echo "Kalimat: $kalimat";
+ echo"<br>";
+ echo "Jumlah Karakter: $jmlchar";
+}
 
 ?>
