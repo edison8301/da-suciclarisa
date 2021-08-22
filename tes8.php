@@ -39,4 +39,10 @@ print $semua["1"]["nama"]."-".$semua["1"]["alamat"]."-".$semua["1"]["agama"]."<b
 print $semua["2"]["nama"]."-".$semua["2"]["alamat"]."-".$semua["2"]["agama"]."<br/>";
 print $semua["3"]["nama"]."-".$semua["3"]["alamat"]."-".$semua["3"]["agama"]."<br/>";
 
+print "<br/>";
+foreach ($semua as $data){
+	print $data["nama"]."_".$data["alamat"]."-".$data["agama"]."<br/";
+
+}
+
 ?>
