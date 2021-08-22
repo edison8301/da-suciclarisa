@@ -34,11 +34,9 @@ $semua = [
 "3" => $siswa3
 ];
 
-print "<br/>";
-print $semua["1"]["nama"]."-".$semua["1"]["alamat"]."-".$semua["1"]["agama"];
-print "<br/>";
-print $semua["2"]["nama"]."-".$semua["2"]["alamat"]."-".$semua["2"]["agama"];
-print "<br/>";
-print $semua["3"]["nama"]."-".$semua["3"]["alamat"]."-".$semua["3"]["agama"];
+print "<br/>"."<br/>";
+print $semua["1"]["nama"]."-".$semua["1"]["alamat"]."-".$semua["1"]["agama"]."<br/>";
+print $semua["2"]["nama"]."-".$semua["2"]["alamat"]."-".$semua["2"]["agama"]."<br/>";
+print $semua["3"]["nama"]."-".$semua["3"]["alamat"]."-".$semua["3"]["agama"]."<br/>";
 
 ?>
