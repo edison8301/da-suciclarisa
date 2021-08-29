@@ -1,0 +1,1 @@
+<a href="html1.php">Link ke HTML 1</a>

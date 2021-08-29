@@ -1,0 +1,20 @@
+<table border="1">
+<tr>
+	<th>No</th>
+	<th>Nama</th>
+	<th>NISN</th>
+	<th>Alamat</th>
+</tr>
+<tr>
+	<td>1</td>
+	<td>Suci</td>
+	<td>101</td>
+	<td>Bandung</td>
+</tr>
+<tr>
+	<td>2</td>
+	<td>Clarisa</td>
+	<td>102</td>
+	<td>Sukabumi</td>
+</tr>
+</table>
