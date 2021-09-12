@@ -1,0 +1,19 @@
+div {
+	color: #ff0000;
+}
+
+.tebal-besar {
+	font-weight: bold; 
+	font-size: 24px;
+	}
+
+	.tebal-padding {
+	font-weight: bold; 
+	padding: 20px;
+	}
+
+#footer {
+	background: #00ff00;
+	padding: 20px; color:
+			#0000ff; text-align: center;
+	}
