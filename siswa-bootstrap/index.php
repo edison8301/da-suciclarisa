@@ -46,7 +46,7 @@ $array_siswa = mysqli_fetch_all($hasil, MYSQLI_ASSOC);
 	<td><?php print $siswa["nama"]; ?></td>
 	<td><?php print $siswa["nisn"]; ?></td>
 	<td><?php print $siswa["alamat"]; ?></td>
-	<td><?php print $siswa["jenis-kelamin"]; ?></td>
+	<td><?php print $siswa["jenis_kelamin"]; ?></td>
 	<td><a href="delete.php?id=<?php print $siswa["id"]; ?>" class="btn btn-danger">Hapus</a></td>
 </tr>
 <?php } ?>

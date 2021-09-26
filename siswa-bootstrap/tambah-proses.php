@@ -15,8 +15,9 @@ $koneksi = mysqli_connect($server, $username, $password, $database);
 $nama = $_GET["nama"];
 $nisn = $_GET["nisn"];
 $alamat = $_GET["alamat"];
+$jenis_kelamin = $_GET["jenis_kelamin"];
 
-$perintah = "INSERT INTO siswa (id, nama, nisn, alamat) VALUES (NULL, '$nama', '$nisn', '$alamat');";
+$perintah = "INSERT INTO siswa (id, nama, nisn, alamat, jenis_kelamin) VALUES (NULL, '$nama', '$nisn', '$alamat', '$jenis_kelamin');";
 $hasil = mysqli_query($koneksi, $perintah);
 
 ?>

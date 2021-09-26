@@ -20,9 +20,9 @@
 	</div>
 	<div class="mb-3">
 		<label class="form-label">Jenis Kelamin</label>
-		<select name="jenis-kelamin" class="form-control">
-			<option value="1">Perempuan</option>
-			<option value="2">Laki-laki</option>
+		<select name="jenis_kelamin" class="form-control">
+			<option value="Laki-laki">Laki-laki</option>
+			<option value="Perempuan">Perempuan</option>
 		</select>
 
 	</div>
