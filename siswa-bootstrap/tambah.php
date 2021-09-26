@@ -6,13 +6,19 @@
 <form action=tambah-proses.php method="get">
 <a href="tes14.php"> </a>
 
-	Nama<br>
-	<input name="nama"><br/>
-	NISN<br>
-	<input name="nisn"><br/>
-	Alamat<br>
-	<input name="alamat"><br/>
-	<br/>
+	<div class="mb-3">
+		<label class="form-label">Nama</label>
+		<input class="form-control" name="nama">
+	</div>
+	<div class="mb-3">
+		<label class="form-label">NISN</label>
+		<input class="form-control" name="nisn">
+	</div>
+	<div class="mb-3">
+		<label class="form-label">Alamat</label>
+		<input class="form-control" name="alamat">
+	</div>
+	
 	<?php include('footer.php'); ?>
 
 	<button class="btn btn-primary">Simpan Data Siswa</button>
