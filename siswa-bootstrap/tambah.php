@@ -18,7 +18,14 @@
 		<label class="form-label">Alamat</label>
 		<input class="form-control" name="alamat">
 	</div>
-	
+	<div class="mb-3">
+		<label class="form-label">Jenis Kelamin</label>
+		<select name="jenis-kelamin" class="form-control">
+			<option value="1">Perempuan</option>
+			<option value="2">Laki-laki</option>
+		</select>
+
+	</div>
 	<?php include('footer.php'); ?>
 
 	<button class="btn btn-primary">Simpan Data Siswa</button>
