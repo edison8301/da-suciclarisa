@@ -1,0 +1,1 @@
+<h1>Hapus Guru</h1>

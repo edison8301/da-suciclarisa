@@ -14,4 +14,14 @@ class Siswa extends Model
     public static function tes() {
         return "Hello World";
     }
+
+    public function helloWorld()
+    {
+        return "Hello World";
+    }
+
+    public static function helloWorldStatic()
+    {
+        return "Hello World static";
+    }
 }

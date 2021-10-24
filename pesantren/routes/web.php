@@ -45,6 +45,19 @@ Route::get('/guru/tambah', function () {
     return view('guru/tambah');
 });
 
+Route::get('/guru/detail', function () {
+    return view('guru/detail');
+});
+
+Route::get('/guru/hapus', function () {
+    return view('guru/hapus');
+});
+
 Route::get('/guru/tambah-proses', function () {
     return view('guru/tambah-proses');
+});
+
+
+Route::get('/latihan1', function () {
+    return view('latihan1');
 });
