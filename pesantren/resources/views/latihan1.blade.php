@@ -7,15 +7,12 @@ use \App\Models\Siswa;
 
 $objectSiswa = new Siswa;
 
-print $objectSiswa->helloWorld();
-
-
 $objectSiswa->nama = "Suci";
 $objectSiswa->nisn = "101";
 $objectSiswa->alamat = "Bandung";
 $objectSiswa->jenis_kelamin = "Perempuan";
+$objectSiswa->golongan_darah = "A";
 
 $objectSiswa->save();
 
-print Siswa::helloWorldStatic();
 ?>

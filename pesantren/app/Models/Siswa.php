@@ -11,10 +11,6 @@ class Siswa extends Model
 
     protected $table = 'siswa';
 
-    public static function tes() {
-        return "Hello World";
-    }
-
     public function helloWorld()
     {
         return "Hello World";

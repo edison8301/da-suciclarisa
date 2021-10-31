@@ -61,3 +61,15 @@ Route::get('/guru/tambah-proses', function () {
 Route::get('/latihan1', function () {
     return view('latihan1');
 });
+
+Route::get('/latihan2', function () {
+    return view('latihan2');
+});
+
+Route::get('/latihan3', function () {
+    return view('latihan3');
+});
+
+Route::get('/latihan4', function () {
+    return view('latihan4');
+});
