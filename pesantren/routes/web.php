@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/siswa', function () {
     return view('siswa/index');
 });
@@ -24,39 +20,6 @@ Route::get('/siswa', function () {
 Route::get('/siswa/index', function () {
     return view('siswa/index');
 });
-
-Route::get('/siswa/tambah', function () {
-    return view('siswa/tambah');
-});
-
-Route::get('/siswa/tambah-proses', function () {
-    return view('siswa/tambah-proses');
-});
-
-Route::get('/guru', function () {
-    return view('guru/index');
-});
-
-Route::get('/guru/index', function () {
-    return view('guru/index');
-});
-
-Route::get('/guru/tambah', function () {
-    return view('guru/tambah');
-});
-
-Route::get('/guru/detail', function () {
-    return view('guru/detail');
-});
-
-Route::get('/guru/hapus', function () {
-    return view('guru/hapus');
-});
-
-Route::get('/guru/tambah-proses', function () {
-    return view('guru/tambah-proses');
-});
-
 
 Route::get('/latihan1', function () {
     return view('latihan1');
