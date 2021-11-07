@@ -21,6 +21,14 @@ Route::get('/siswa/index', function () {
     return view('siswa/index');
 });
 
+Route::get('/siswa/hapus', function () {
+    return view('siswa/hapus');
+});
+
+Route::get('/siswa/detail', function () {
+    return view('siswa/detail');
+});
+
 Route::get('/latihan1', function () {
     return view('latihan1');
 });
