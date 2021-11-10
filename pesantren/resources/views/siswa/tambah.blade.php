@@ -11,7 +11,22 @@
 	Alamat<br>
 	<input name="alamat"><br/>
 	<br/>
-
-	<button>Kirim</button>
+	Jenis Kelamin<br>
+	<select name="jenis_kelamin">
+		<option value="Laki-laki">Laki-laki</option>
+		<option value="Perempuan">Perempuan</option>
+	</select>
+	<br/>
+	<br/>
+	Golongan Darah<br>
+	<select name="golongan_darah">
+		<option value="A">A</option>
+		<option value="B">B</option>
+		<option value="AB">AB</option>
+		<option value="O">O</option>
+	</select>
+	<br/>
+	<br/>
+	<button>Simpan</button>
 
 </form>

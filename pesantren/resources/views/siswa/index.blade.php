@@ -29,8 +29,8 @@ $arraySiswa = $query->get();
 			<td><?= $siswa->nisn; ?></td>
 			<td><?= $siswa->alamat; ?></td>
 			<td>
-				<a href="<?= url("/siswa/detail?id=$siswa->id"); ?>">Detail</a>
-				<a href="<?= url("/siswa/ubah?id=$siswa->id"); ?>">Ubah</a>
+				<button><a href="<?= url("/siswa/detail?id=$siswa->id"); ?>">Detail</a></button> |
+				<a href="<?= url("/siswa/ubah?id=$siswa->id"); ?>">Ubah</a> |
 				<a href="<?= url("/siswa/hapus?id=$siswa->id"); ?>">Hapus</a>
 			</td>
 		</tr>

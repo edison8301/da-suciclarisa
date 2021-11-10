@@ -29,6 +29,18 @@ Route::get('/siswa/detail', function () {
     return view('siswa/detail');
 });
 
+Route::get('/siswa/tambah', function () {
+    return view('siswa/tambah');
+});
+
+Route::get('/siswa/tambah-proses', function () {
+    return view('siswa/tambah-proses');
+});
+
+Route::get('/siswa/ubah', function () {
+    return view('siswa/ubah');
+});
+
 Route::get('/latihan1', function () {
     return view('latihan1');
 });

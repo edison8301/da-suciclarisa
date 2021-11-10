@@ -41,6 +41,8 @@ $siswa = $query->first();
 	</tr>
 </table>
 
+<br/>
+
 <div>
 	<a href="<?= url('/siswa/index'); ?>">Kembali ke Daftar Siswa</a>
 </div>

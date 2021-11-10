@@ -1,3 +1,5 @@
+<h1>Update Data</h1>
+
 <?php
 
 use App\Models\Siswa;
@@ -15,4 +17,3 @@ $siswa->save();
 <h4>Berhasil Ditambahkan</h4>
 <br/>
 <a href="<?php print url ('/siswa/index/'); ?>">Kembali ke Daftar Siswa</a>
-
