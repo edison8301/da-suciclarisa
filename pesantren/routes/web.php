@@ -41,6 +41,10 @@ Route::get('/siswa/ubah', function () {
     return view('siswa/ubah');
 });
 
+Route::get('/siswa/update', function () {
+    return view('siswa/update');
+});
+
 Route::get('/latihan1', function () {
     return view('latihan1');
 });

@@ -13,7 +13,7 @@ $siswa = $query->first();
 ?>
 
 <tr>
-	<form action="<?php print url('/siswa/index'); ?>" method="post">
+	<form action="<?php print url('/siswa/update'); ?>" method="get">
 		<input type="hidden" value="<?php print $siswa['id'];?>" name="id">
 		Nama<br>
 		<input value="<?php print $siswa['nama'];?>" name="nama"><br/>
@@ -23,7 +23,6 @@ $siswa = $query->first();
 		<br/>
 		Alamat<br>
 		<input value="<?php print $siswa['alamat'];?>" name="alamat"><br/>
-		<br/>
 		<br/>
 		Jenis Kelamin<br>
 		<select name="jenis_kelamin">
@@ -41,6 +40,6 @@ $siswa = $query->first();
 		</select>
 		<br/>
 		<br/>
-		<button type="submit">Simpan</button>
+		<button>Simpan Perubahan</button>
 	</form>
 </tr>

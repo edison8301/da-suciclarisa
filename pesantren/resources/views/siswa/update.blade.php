@@ -1,10 +1,14 @@
-<h1>Update Data</h1>
-
 <?php
 
 use App\Models\Siswa;
 
-$siswa = new Siswa;
+$id = $_GET['id'];
+
+$query = Siswa::query();
+$query->where('id','=',$id);
+
+$siswa = $query->first();
+
 $siswa->nama = $_GET["nama"];
 $siswa->nisn = $_GET["nisn"];
 $siswa->alamat = $_GET["alamat"];
@@ -14,6 +18,6 @@ $siswa->save();
 
 ?>
 
-<h4>Berhasil Ditambahkan</h4>
+<h4>Berhasil Diubah</h4>
 <br/>
 <a href="<?php print url ('/siswa/index/'); ?>">Kembali ke Daftar Siswa</a>

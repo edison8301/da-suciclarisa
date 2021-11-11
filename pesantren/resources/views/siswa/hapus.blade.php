@@ -16,6 +16,6 @@ $siswa->delete();
 ?>
 
 <div>
-	Siswa Berhasil dihapus
-	<a href="<?= url('/siswa/index'); ?>">Kembali ke Daftar Siswa</a>
+	<h3>Siswa Berhasil dihapus</h3>
+	<h3><a href="<?= url('/siswa/index'); ?>">Kembali ke Daftar Siswa</a></h3>
 </div>

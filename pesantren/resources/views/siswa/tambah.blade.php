@@ -1,5 +1,6 @@
 <h1>Tambah Siswa</h1>
 
+
 <form action="<?php print url('/siswa/tambah-proses'); ?>" method="get">
 
 	Nama<br>
