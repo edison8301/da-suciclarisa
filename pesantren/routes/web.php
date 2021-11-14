@@ -45,6 +45,44 @@ Route::get('/siswa/update', function () {
     return view('siswa/update');
 });
 
+
+//Guru
+
+Route::get('/guru', function () {
+    return view('guru/index');
+});
+
+Route::get('/guru/index', function () {
+    return view('guru/index');
+});
+
+Route::get('/guru/hapus', function () {
+    return view('guru/hapus');
+});
+
+Route::get('/guru/detail', function () {
+    return view('guru/detail');
+});
+
+Route::get('/guru/tambah', function () {
+    return view('guru/tambah');
+});
+
+Route::get('/guru/tambah-proses', function () {
+    return view('guru/tambah-proses');
+});
+
+Route::get('/guru/ubah', function () {
+    return view('guru/ubah');
+});
+
+Route::get('/guru/update', function () {
+    return view('guru/update');
+});
+
+
+//Latihan
+
 Route::get('/latihan1', function () {
     return view('latihan1');
 });

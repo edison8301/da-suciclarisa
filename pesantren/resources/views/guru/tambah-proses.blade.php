@@ -13,6 +13,6 @@ $guru->save();
 
 ?>
 
-<h1>Tambah Guru Proses</h1>
+<h1>Data Guru Berhasil Ditambahkan</h1>
 
-<a href="<?php print url ('/guru/index/'); ?>">Daftar Guru</a>
+<a href="<?php print url ('/guru/index/'); ?>">Kembali ke Daftar Guru</a>

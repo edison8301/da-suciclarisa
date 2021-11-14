@@ -9,7 +9,11 @@
 	<input name="nip"><br/>
 	<br/>
 	Jenis Kelamin<br>
-	<input name="jenis_kelamin"><br/>
+	<select name="jenis_kelamin">
+		<option value="Laki-laki">Laki-laki</option>
+		<option value="Perempuan">Perempuan</option>
+	</select>
+	<br/>
 	<br/>
 	Jenjang Pendidikan<br>
 	<input name="jenjang_pendidikan"><br/>

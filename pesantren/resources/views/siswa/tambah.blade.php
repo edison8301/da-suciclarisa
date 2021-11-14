@@ -18,7 +18,6 @@
 		<option value="Perempuan">Perempuan</option>
 	</select>
 	<br/>
-	<br/>
 	Golongan Darah<br>
 	<select name="golongan_darah">
 		<option value="A">A</option>
