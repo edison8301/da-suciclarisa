@@ -8,6 +8,7 @@
 <?php
 
 use App\Models\Siswa;
+use App\Models\Pembayaran;
 
 $id = $_GET['id'];
 
@@ -15,6 +16,11 @@ $query = Siswa::query();
 $query->where('id','=',$id);
 
 $siswa = $query->first();
+
+$queryPembayaran = Pembayaran::query();
+$queryPembayaran->where('id_siswa','=',$id);
+
+$arrayPembayaran = $queryPembayaran->get();
 
 ?>
 <div class="container">
@@ -49,6 +55,33 @@ $siswa = $query->first();
 					<td>:</td>
 					<td><?= $siswa->golongan_darah; ?></td>
 				</tr>
+			</table>
+
+			<h2>Pembayaran SPP</h2>
+
+			<div style="margin-bottom: 20px">
+				<a href="<?= url('/pembayaran/create?id_siswa='.$siswa->id); ?>">Tambah Data Pembayaran</a>
+			</div>
+
+			<table class="table">
+				<tr>
+					<th>No</th>
+					<th>Bulan</th>
+					<th>Tahun</th>
+					<th>Jumlah</th>
+					<th>Tanggal Pembayaran</th>
+				</tr>
+				<?php $no =1 ; ?>
+				<?php foreach($arrayPembayaran as $pembayaran) { ?>
+					<tr>
+						<td><?= $no; ?></td>
+						<td><?= $pembayaran->bulan; ?></td>
+						<td><?= $pembayaran->tahun; ?></td>
+						<td><?= $pembayaran->jumlah; ?></td>
+						<td><?= $pembayaran->tanggal_pembayaran; ?></td>
+					</tr>
+				<?php $no = $no + 1; ?>
+			<?php } ?>
 			</table>
 
 			<br/>
