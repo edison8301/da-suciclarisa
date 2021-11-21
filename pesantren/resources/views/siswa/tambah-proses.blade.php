@@ -1,3 +1,8 @@
+@extends('layouts.main')
+
+
+@section('content')
+
 <?php
 
 use App\Models\Siswa;
@@ -12,7 +17,17 @@ $siswa->save();
 
 ?>
 
-<h4>Berhasil Ditambahkan</h4>
-<br/>
-<a href="<?php print url ('/siswa/index/'); ?>">Kembali ke Daftar Siswa</a>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+
+			<h4>Berhasil Ditambahkan</h4>
+			<br/>
+			<a href="<?php print url ('/siswa/index/'); ?>" class="btn btn-success">Kembali ke Daftar Siswa</a>
+
+		</div>
+	</div>
+</div>
+
+@endsection
 

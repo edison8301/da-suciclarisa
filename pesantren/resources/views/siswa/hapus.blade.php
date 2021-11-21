@@ -1,21 +1,37 @@
-<h1>Hapus Siswa</h1>
+@extends('layouts.main')
 
-<?php
 
-use App\Models\Siswa;
+@section('content')
 
-$id = $_GET['id'];
 
-$query = Siswa::query();
-$query->where('id','=',$id);
 
-$siswa = $query->first();
+<div class="container">
+	<div class="row">
+		<div class="col-12">
 
-$siswa->delete();
+			<h1>Hapus Siswa</h1>
 
-?>
+			<?php
 
-<div>
-	<h3>Siswa Berhasil dihapus</h3>
-	<h3><a href="<?= url('/siswa/index'); ?>">Kembali ke Daftar Siswa</a></h3>
+			use App\Models\Siswa;
+
+			$id = $_GET['id'];
+
+			$query = Siswa::query();
+			$query->where('id','=',$id);
+
+			$siswa = $query->first();
+
+			$siswa->delete();
+
+			?>
+
+			<div>
+				<h4>Siswa Berhasil dihapus</h4>
+				<h4><a href="<?= url('/siswa/index'); ?>" class="btn btn-success">Kembali ke Daftar Siswa</a></h4>
+			</div>
+		</div>
+	</div>
 </div>
+
+@endsection

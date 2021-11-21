@@ -11,6 +11,9 @@
     <title>Hello, world!</title>
   </head>
   <body>
+
+    @include('layouts.menu')
+    
     @yield('content')
 
     <!-- Optional JavaScript; choose one of the two! -->

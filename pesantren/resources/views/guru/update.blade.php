@@ -1,3 +1,8 @@
+@extends('layouts.main')
+
+
+@section('content')
+
 <?php
 
 use App\Models\Guru;
@@ -17,7 +22,17 @@ $siswa->jurusan = $_GET["jurusan"];
 $siswa->save();
 
 ?>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
 
-<h4>Berhasil Diubah</h4>
-<br/>
-<a href="<?php print url ('/guru/index/'); ?>">Kembali ke Daftar Guru</a>
+			<h4>Berhasil Diubah</h4>
+			<br/>
+			<a href="<?php print url ('/guru/index/'); ?>">Kembali ke Daftar Guru</a>
+			</div>
+	</div>
+</div>
+
+
+
+@endsection

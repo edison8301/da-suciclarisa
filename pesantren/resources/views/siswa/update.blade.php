@@ -1,3 +1,8 @@
+@extends('layouts.main')
+
+
+@section('content')
+
 <?php
 
 use App\Models\Siswa;
@@ -17,7 +22,17 @@ $siswa->golongan_darah = $_GET["golongan_darah"];
 $siswa->save();
 
 ?>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
 
-<h4>Berhasil Diubah</h4>
-<br/>
-<a href="<?php print url ('/siswa/index/'); ?>">Kembali ke Daftar Siswa</a>
+			<h4>Berhasil Diubah</h4>
+			<br/>
+			<a href="<?php print url ('/siswa/index/'); ?>">Kembali ke Daftar Siswa</a>
+			</div>
+	</div>
+</div>
+
+
+
+@endsection

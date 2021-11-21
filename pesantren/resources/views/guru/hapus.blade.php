@@ -1,3 +1,8 @@
+@extends('layouts.main')
+
+
+@section('content')
+
 <?php
 
 use App\Models\Guru;
@@ -13,7 +18,17 @@ $guru->delete();
 
 ?>
 
-<div>
-	<h3>Data Guru Berhasil dihapus</h3>
-	<h3><a href="<?= url('/guru/index'); ?>">Kembali ke Daftar Guru</a></h3>
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+
+			<div>
+				<h4>Data Guru Berhasil dihapus</h4>
+				<h4><a href="<?= url('/guru/index'); ?>" class="btn btn-info">Kembali ke Daftar Guru</a></h4>
+			</div>
+		</div>
+	</div>
 </div>
+
+@endsection
