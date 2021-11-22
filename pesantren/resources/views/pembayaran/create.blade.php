@@ -9,7 +9,7 @@
 use App\Models\Siswa;
 use App\Models\Pembayaran;
 
-$id = $_GET['id'];
+$id = $_GET['id_siswa'];
 
 $query = Siswa::query();
 $query->where('id','=',$id);
@@ -24,11 +24,11 @@ $arrayPembayaran = $queryPembayaran->get();
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-12">
+		<div class="col-3">
 
-			<h1>Detail Siswa</h1>
+			<h1>Identitas Siswa</h1>
 
-			<table border="1" cellspacing="0" class="table table-bordered">
+			<table class="table">
 				<tr>
 					<td>Nama</td>
 					<td>:</td>
@@ -57,38 +57,24 @@ $arrayPembayaran = $queryPembayaran->get();
 			</table>
 
 			<h2>Pembayaran SPP</h2>
+			<form action="<?php print url('/pembayaran/tambah-proses'); ?>" method="get">
 
-			<div style="margin-bottom: 20px">
-				<a href="<?= url('/pembayaran/create?id_siswa='.$siswa->id); ?>">Tambah Data Pembayaran</a>
-			</div>
+				Tanggal<br>
+				<input name="tanggal"><br/>
+				<br/>
+				Bulan<br>
+				<input name="bulan"><br/>
+				<br/>
+				Tahun<br>
+				<input name="tahun"><br/>
+				<br/>
+				Jumlah<br>
+				<input name="jumlah"><br/>
+				
+				<br/>
+				<button class="btn btn-success">Simpan</button>
 
-			<table class="table">
-				<tr>
-					<th>No</th>
-					<th>Bulan</th>
-					<th>Tahun</th>
-					<th>Jumlah</th>
-					<th>Tanggal Pembayaran</th>
-				</tr>
-				<?php $no =1 ; ?>
-				<?php foreach($arrayPembayaran as $pembayaran) { ?>
-					<tr>
-						<td><?= $no; ?></td>
-						<td><?= $pembayaran->bulan; ?></td>
-						<td><?= $pembayaran->tahun; ?></td>
-						<td><?= $pembayaran->jumlah; ?></td>
-						<td><?= $pembayaran->tanggal_pembayaran; ?></td>
-					</tr>
-				<?php $no = $no + 1; ?>
-			<?php } ?>
-			</table>
-
-			<br/>
-
-			<div>
-				<a href="<?= url('/siswa/index'); ?>" class="btn btn-success">Kembali ke Daftar Siswa</a>
-			</div>
-
+			</form>
 		</div>
 	</div>
 </div>

@@ -98,3 +98,22 @@ Route::get('/latihan3', function () {
 Route::get('/latihan4', function () {
     return view('latihan4');
 });
+
+
+//Pembayaran
+
+Route::get('siswa/pembayaran', function () {
+    return view('pembayaran/index');
+});
+
+Route::get('siswa/pembayaran/index', function () {
+    return view('siswa/pembayaran/index');
+});
+
+Route::get('pembayaran/create', function () {
+    return view('pembayaran/create');
+});
+
+Route::get('pembayaran/tambah-proses', function () {
+    return view('pembayaran/tambah-proses');
+});
