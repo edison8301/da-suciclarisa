@@ -114,6 +114,6 @@ Route::get('pembayaran/create', function () {
     return view('pembayaran/create');
 });
 
-Route::get('pembayaran/tambah-proses', function () {
+Route::get('pembayaran/tambah-proses/{id_siswa}', function () {
     return view('pembayaran/tambah-proses');
 });

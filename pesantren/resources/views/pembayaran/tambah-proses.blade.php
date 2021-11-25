@@ -5,13 +5,14 @@
 
 <?php
 
-
 use App\Models\Pembayaran;
 
+
 $pembayaran = new Pembayaran;
-$pembayaran->tanggal_pembayaran = $_GET["tanggal"];
+$pembayaran->id_siswa = $_GET["id_siswa"];
 $pembayaran->bulan = $_GET["bulan"];
 $pembayaran->tahun = $_GET["tahun"];
+$pembayaran->tanggal_pembayaran = $_GET["tanggal_pembayaran"];
 $pembayaran->jumlah = $_GET["jumlah"];
 
 $pembayaran->save();
@@ -25,8 +26,6 @@ $pembayaran->save();
 
 			<h4>Berhasil Disimpan</h4>
 			<br/>
-			<a href="<?php print url ('/pembayaran/index/'); ?>" class="btn btn-success">Kembali ke Daftar Siswa</a>
-
 		</div>
 	</div>
 </div>
