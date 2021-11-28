@@ -13,7 +13,7 @@
           <a class="nav-link" href="<?= url('/guru/index');?>">Guru</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= url('/siswa/pembayaran');?>">Pembayaran</a>
+          <a class="nav-link" href="<?= url('/pembayaran/index');?>">Pembayaran</a>
         </li>
       </ul>
     </div>

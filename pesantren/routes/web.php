@@ -110,6 +110,14 @@ Route::get('siswa/pembayaran/index', function () {
     return view('siswa/pembayaran/index');
 });
 
+Route::get('/pembayaran', function () {
+    return view('pembayaran/index');
+});
+
+Route::get('/pembayaran/index', function () {
+    return view('siswa/pembayaran/index');
+});
+
 Route::get('pembayaran/create', function () {
     return view('pembayaran/create');
 });
