@@ -7,15 +7,9 @@
 
 use App\Models\Pembayaran;
 
-$id = $_GET['id_siswa'];
-
-$queryPembayaran = Pembayaran::query();
-$queryPembayaran->where('id_siswa','=',$id);
-
-$arrayPembayaran = $queryPembayaran->first();
+$id_siswa = $_GET['id_siswa'];
 
 ?>
-
 
 
 <div class="container">
@@ -25,9 +19,9 @@ $arrayPembayaran = $queryPembayaran->first();
 
 		<h2>Pembayaran SPP</h2>
 
-			<form action="<?php print url('/pembayaran/tambah-proses/{id_siswa}'); ?>" method="get">
+			<form action="<?php print url('/pembayaran/tambah-proses'); ?>" method="get">
 
-				<input type="hidden" value="<?php print $arrayPembayaran['id_siswa'];?>" name="id_siswa">
+				<input type="hidden" name="id_siswa" value="<?php print $id_siswa ; ?>">
 				Tanggal<br>
 				<input name="tanggal_pembayaran"><br/>
 				<br/>
