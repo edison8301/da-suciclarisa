@@ -102,20 +102,13 @@ Route::get('/latihan4', function () {
 
 //Pembayaran
 
-Route::get('siswa/pembayaran', function () {
-    return view('pembayaran/index');
-});
-
-Route::get('siswa/pembayaran/index', function () {
-    return view('siswa/pembayaran/index');
-});
 
 Route::get('/pembayaran', function () {
     return view('pembayaran/index');
 });
 
 Route::get('/pembayaran/index', function () {
-    return view('siswa/pembayaran/index');
+    return view('pembayaran/index');
 });
 
 Route::get('pembayaran/create', function () {

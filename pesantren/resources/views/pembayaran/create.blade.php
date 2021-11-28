@@ -6,8 +6,14 @@
 <?php
 
 use App\Models\Pembayaran;
+use App\Models\Siswa;
 
-$id_siswa = $_GET['id_siswa'];
+if (isset($_GET["id_siswa"]) == true) {
+	$id_siswa = $_GET['id_siswa'];
+}
+
+$query = Siswa::query();
+$arraySiswa = $query->get();
 
 ?>
 
@@ -21,7 +27,22 @@ $id_siswa = $_GET['id_siswa'];
 
 			<form action="<?php print url('/pembayaran/tambah-proses'); ?>" method="get">
 
-				<input type="hidden" name="id_siswa" value="<?php print $id_siswa ; ?>">
+				<?php if (isset($_GET['id_siswa']) == true) { ?>
+					<input type="hidden" name="id_siswa" value="<?php print $id_siswa ; ?>">
+				<?php } ?>
+
+				<?php if (isset($_GET['id_siswa']) == false) { ?>
+					Nama<br/>
+					<select name="id_siswa">
+						<?php foreach($arraySiswa as $siswa) { ?>
+							<option value="<?= $siswa->id; ?>">
+								<?= $siswa->nama; ?>
+							</option>
+						<?php } ?>
+					</select>
+				<?php } ?>
+				<br/>
+				<br/>
 				Tanggal<br>
 				<input name="tanggal_pembayaran"><br/>
 				<br/>
