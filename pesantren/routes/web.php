@@ -118,3 +118,19 @@ Route::get('pembayaran/create', function () {
 Route::get('pembayaran/tambah-proses', function () {
     return view('pembayaran/tambah-proses');
 });
+
+Route::get('pembayaran/ubah', function () {
+    return view('pembayaran/ubah');
+});
+
+Route::get('pembayaran/detail', function () {
+    return view('pembayaran/detail');
+});
+
+Route::get('pembayaran/hapus', function () {
+    return view('pembayaran/hapus');
+});
+
+Route::get('pembayaran/update', function () {
+    return view('pembayaran/update');
+});

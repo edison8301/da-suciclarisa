@@ -54,10 +54,8 @@ $arraySiswa = $query->get();
 				<br/>
 				Jumlah<br>
 				<input name="jumlah"><br/>
-				
 				<br/>
 				<button class="btn btn-success">Simpan</button>
-
 			</form>
 		</div>
 	</div>
