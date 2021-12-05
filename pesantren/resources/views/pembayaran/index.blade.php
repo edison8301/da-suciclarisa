@@ -25,7 +25,7 @@ $arrayPembayaran = $queryPembayaran->get();
 				<a href="<?= url('/pembayaran/create'); ?>" class="btn btn-success">Tambah Data Pembayaran</a>
 			</div>
 
-			<table border="1" cellspacing="0" class="table table-bordered">
+			<table border="1" cellspacing="0" class="table table-hover">
 				<tr>
 					<th>No</th>
 					<th>Id Siswa</th>

@@ -22,11 +22,11 @@ $arraySiswa = $query->get();
 			<h1>Daftar Siswa</h1>
 
 			<div style="margin-bottom: 20px;">
-				<a href="<?= url('/siswa/tambah'); ?>" class="btn btn-success">Tambah Siswa</a>
+				<a href="<?= url('/siswa/tambah'); ?>" class="btn btn-primary">Tambah Siswa</a>
 			</div>
 
-			<table border="1" cellspacing="0" class="table table-bordered">
-				<tr>
+			<table class="table table-hover">
+				<tr class="table-primary">
 					<th>No</th>
 					<th>Nama</th>
 					<th>NISN</th>

@@ -23,7 +23,7 @@ $arrayGuru = $query->get();
 				<a href="<?= url('/guru/tambah'); ?>" class="btn btn-primary">Tambah Guru</a>
 			</div>
 
-			<table border="1" cellspacing="0" class="table table-bordered">
+			<table border="1" cellspacing="0" class="table table-hover">
 				<tr>
 					<th>No</th>
 					<th>Nama</th>

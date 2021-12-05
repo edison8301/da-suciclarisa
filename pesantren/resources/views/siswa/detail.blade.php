@@ -24,11 +24,11 @@ $arrayPembayaran = $queryPembayaran->get();
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-12">
+		<div class="col-6">
 
 			<h1>Detail Siswa</h1>
 
-			<table border="1" cellspacing="0" class="table table-bordered">
+			<table class="table table-bordered">
 				<tr>
 					<td>Nama</td>
 					<td>:</td>
@@ -55,15 +55,18 @@ $arrayPembayaran = $queryPembayaran->get();
 					<td><?= $siswa->golongan_darah; ?></td>
 				</tr>
 			</table>
+		</div>
+
+			<div class="col-9">
 
 			<h2>Pembayaran SPP</h2>
 
 			<div style="margin-bottom: 20px">
-				<a href="<?= url('/pembayaran/create?id_siswa='.$siswa->id); ?>">Tambah Data Pembayaran</a>
+				<a href="<?= url('/pembayaran/create?id_siswa='.$siswa->id); ?>" class="btn btn-primary">Tambah Data Pembayaran</a>
 			</div>
 
-			<table class="table">
-				<tr>
+			<table class="table table-hover">
+				<tr class="table-active">
 					<th>No</th>
 					<th>Bulan</th>
 					<th>Tahun</th>
