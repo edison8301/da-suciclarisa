@@ -66,7 +66,7 @@ $arrayPembayaran = $queryPembayaran->get();
 			</div>
 
 			<table class="table table-hover">
-				<tr class="table-active">
+				<tr style="text-align: center" class="table-active">
 					<th>No</th>
 					<th>Bulan</th>
 					<th>Tahun</th>
@@ -74,19 +74,28 @@ $arrayPembayaran = $queryPembayaran->get();
 					<th>Tanggal Pembayaran</th>
 				</tr>
 				<?php $no =1 ; ?>
+				<?php $total_pembayaran = 0; ?>
 				<?php foreach($arrayPembayaran as $pembayaran) { ?>
 					<tr>
-						<td><?= $no; ?></td>
-						<td><?= $pembayaran->bulan; ?></td>
-						<td><?= $pembayaran->tahun; ?></td>
-						<td><?= $pembayaran->jumlah; ?></td>
-						<td><?= $pembayaran->tanggal_pembayaran; ?></td>
+						<td style="text-align: center"><?= $no; ?></td>
+						<td style="text-align: center"><?= $pembayaran->bulan; ?></td>
+						<td style="text-align: center"><?= $pembayaran->tahun; ?></td>
+						<td style="text-align: right;"><?= $pembayaran->jumlah; ?></td>
+						<td style="text-align: center"><?= $pembayaran->tanggal_pembayaran; ?></td>
 					</tr>
+				<?php $total_pembayaran = $total_pembayaran + $pembayaran->jumlah; ?>
 				<?php $no = $no + 1; ?>
-			<?php } ?>
-			</table>
 
-			<br/>
+			<?php } ?>
+
+			<tr>
+				<th></th>
+				<th>Total</th>
+				<th></th>
+				<th style="text-align: right;"> <?= $total_pembayaran; ?></th>
+				<th></th>
+			</tr>
+			</table>
 
 			<div>
 				<a href="<?= url('/siswa/index'); ?>" class="btn btn-success">Kembali ke Daftar Siswa</a>

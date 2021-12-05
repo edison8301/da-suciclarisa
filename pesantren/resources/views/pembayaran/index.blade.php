@@ -29,6 +29,8 @@ $arrayPembayaran = $queryPembayaran->get();
 				<tr>
 					<th>No</th>
 					<th>Id Siswa</th>
+					<th>Nama Siswa</th>
+					<th>NISN</th>
 					<th>Tanggal Pembayaran</th>
 					<th>Bulan</th>
 					<th>Tahun</th>
@@ -40,10 +42,12 @@ $arrayPembayaran = $queryPembayaran->get();
 					<tr>
 						<td><?= $no; ?></td>
 						<td><?= $pembayaran->id_siswa; ?></td>
+						<td><?= @$pembayaran->siswa->nama ?></td>
+						<td><?= @$pembayaran->siswa->nisn ?></td>
 						<td><?= $pembayaran->tanggal_pembayaran; ?></td>
 						<td><?= $pembayaran->bulan; ?></td>
 						<td><?= $pembayaran->tahun; ?></td>
-						<td><?= $pembayaran->jumlah; ?></td>
+						<td><?= number_format ($pembayaran->jumlah,0,",","."); ?></td>
 						<td>
 							<a href="<?= url("/pembayaran/detail?id=$pembayaran->id"); ?>">Detail</a> |
 							<a href="<?= url("/pembayaran/ubah?id=$pembayaran->id"); ?>">Ubah</a> |
