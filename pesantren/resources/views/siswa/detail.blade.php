@@ -72,6 +72,7 @@ $arrayPembayaran = $queryPembayaran->get();
 					<th>Tahun</th>
 					<th>Jumlah</th>
 					<th>Tanggal Pembayaran</th>
+					<th>Aksi</th>
 				</tr>
 				<?php $no =1 ; ?>
 				<?php $total_pembayaran = 0; ?>
@@ -82,6 +83,10 @@ $arrayPembayaran = $queryPembayaran->get();
 						<td style="text-align: center"><?= $pembayaran->tahun; ?></td>
 						<td style="text-align: right;"><?= $pembayaran->jumlah; ?></td>
 						<td style="text-align: center"><?= $pembayaran->tanggal_pembayaran; ?></td>
+						<td>
+							<a href="<?= url("/pembayaran/ubah?id=$pembayaran->id"); ?>">Ubah</a> |
+							<a href="<?= url("/pembayaran/hapus?id=$pembayaran->id");  ?>">Hapus</a>
+						</td>
 					</tr>
 				<?php $total_pembayaran = $total_pembayaran + $pembayaran->jumlah; ?>
 				<?php $no = $no + 1; ?>
