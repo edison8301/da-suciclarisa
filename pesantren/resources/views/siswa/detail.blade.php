@@ -62,7 +62,7 @@ $arrayPembayaran = $queryPembayaran->get();
 			<h2>Pembayaran SPP</h2>
 
 			<div style="margin-bottom: 20px">
-				<a href="<?= url('/pembayaran/create?id_siswa='.$siswa->id); ?>" class="btn btn-primary">Tambah Data Pembayaran</a>
+				<a href="<?= url('/pembayaran/tambah?id_siswa='.$siswa->id); ?>" class="btn btn-primary">Tambah Data Pembayaran</a>
 			</div>
 
 			<table class="table table-hover">

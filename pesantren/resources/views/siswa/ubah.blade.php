@@ -1,8 +1,3 @@
-@extends('layouts.main')
-
-
-@section('content')
-
 <?php
 
 use App\Models\Siswa;
@@ -13,7 +8,15 @@ $query = Siswa::query();
 $query->where('id','=',$id);
 
 $siswa = $query->first();
+
 ?>
+
+
+@extends('layouts.main')
+
+
+@section('content')
+
 
 <div class="container">
 	<div class="row">
@@ -21,37 +24,11 @@ $siswa = $query->first();
 
 			<h1>Ubah Data Siswa</h1>
 			
-			<tr>
-				<form action="<?php print url('/siswa/update'); ?>" method="get">
-					<input type="hidden" value="<?php print $siswa['id'];?>" name="id">
-					Nama<br>
-					<input value="<?php print $siswa['nama'];?>" name="nama"><br/>
-					<br/>
-					NISN<br>
-					<input value="<?php print $siswa['nisn'];?>" name="nisn"><br/>
-					<br/>
-					Alamat<br>
-					<input value="<?php print $siswa['alamat'];?>" name="alamat"><br/>
-					<br/>
-					Jenis Kelamin<br>
-					<select name="jenis_kelamin">
-						<option value="Laki-laki">Laki-laki</option>
-						<option value="Perempuan">Perempuan</option>
-					</select>
-					<br/>
-					<br/>
-					Golongan Darah<br>
-					<select name="golongan_darah">
-						<option value="A">A</option>
-						<option value="B">B</option>
-						<option value="AB">AB</option>
-						<option value="O">O</option>
-					</select>
-					<br/>
-					<br/>
-					<button class="btn btn-success">Simpan Perubahan</button>
-				</form>
-			</tr>
+			@include('siswa/form',[
+				'action' => url('/siswa/ubah-proses'),
+				'siswa' => $siswa
+			])
+			
 
 		</div>
 	</div>

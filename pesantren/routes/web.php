@@ -41,8 +41,8 @@ Route::get('/siswa/ubah', function () {
     return view('siswa/ubah');
 });
 
-Route::get('/siswa/update', function () {
-    return view('siswa/update');
+Route::get('/siswa/ubah-proses', function () {
+    return view('siswa/ubah-proses');
 });
 
 
@@ -111,8 +111,8 @@ Route::get('/pembayaran/index', function () {
     return view('pembayaran/index');
 });
 
-Route::get('pembayaran/create', function () {
-    return view('pembayaran/create');
+Route::get('pembayaran/tambah', function () {
+    return view('pembayaran/tambah');
 });
 
 Route::get('pembayaran/tambah-proses', function () {
@@ -131,6 +131,6 @@ Route::get('pembayaran/hapus', function () {
     return view('pembayaran/hapus');
 });
 
-Route::get('pembayaran/update', function () {
-    return view('pembayaran/update');
+Route::get('pembayaran/ubah-proses', function () {
+    return view('pembayaran/ubah-proses');
 });

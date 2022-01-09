@@ -22,7 +22,7 @@ $arrayPembayaran = $queryPembayaran->get();
 			<h1>Data Pembayaran</h1>
 
 			<div style="margin-bottom: 20px">
-				<a href="<?= url('/pembayaran/create'); ?>" class="btn btn-success">Tambah Data Pembayaran</a>
+				<a href="<?= url('/pembayaran/tambah'); ?>" class="btn btn-success">Tambah Data Pembayaran</a>
 			</div>
 
 			<table border="1" cellspacing="0" class="table table-hover">
