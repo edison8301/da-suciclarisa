@@ -27,13 +27,14 @@
 					<th>Aksi</th>
 				</tr>
 				<?php $no=1; ?>
+				<?php $total= 0; ?>
 				<?php foreach ($arraySiswa as $siswa) { ?>
 					<tr>
 						<td><?= $no; ?></td>
 						<td><?= $siswa->nama; ?></td>
 						<td><?= $siswa->nisn; ?></td>
 						<td><?= $siswa->alamat; ?></td>
-						<td><?= $siswa->getTotalPembayaran(); ?></td>
+						<td>{{ number_format($siswa->getTotalPembayaran())}};</td>
 						<td><?= $siswa->getTotalHarusDibayar(); ?></td>
 						<td><?= $siswa->getTotalKekuranganPembayaran(); ?></td>
 						<td>
@@ -44,6 +45,15 @@
 					</tr>
 				<?php $no = $no + 1; ?>
 				<?php } ?>
+			<tr>
+				<th></th>
+				<th>Total</th>
+				<th></th>
+				<th style="text-align: right;"><?= $total + $siswa->getTotalPembayaran() ; ?></th>
+				<th style="text-align: right;"><?= $total + $siswa->getTotalHarusDibayar() ; ?></th>
+				<th style="text-align: right;"><?= $total + $siswa->getTotalKekuranganPembayaran() ; ?></th>
+				<th></th>
+			</tr>
 			</table>
 			
 		</div>
