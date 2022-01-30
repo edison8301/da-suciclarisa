@@ -22,11 +22,27 @@ class Siswa extends Model
 
     public function getTotalPembayaran() {
 
-        $query = Pembayaran::query();
-        $query->where('id_siswa', '=', $this->id);
+        $arrayPembayaran = $this->getArrayPembayaran();
 
-        $arrayPembayaran = $query->get();
+        $total = 0;
 
-        return $arrayPembayaran;
+        foreach($arrayPembayaran as $pembayaran) {
+            $total = $total + $pembayaran->jumlah;
+        }
+
+        return $total;
+    }
+
+    public function getTotalHarusDibayar() {
+
+        return 1200000;
+    }
+
+    public function getTotalKekuranganPembayaran() {
+
+        $totalPembayaran = $this->getTotalPembayaran();
+        $totalHarusDibayar = $this->getTotalHarusDibayar() - $totalPembayaran ;
+
+        return $totalHarusDibayar;
     }
 }

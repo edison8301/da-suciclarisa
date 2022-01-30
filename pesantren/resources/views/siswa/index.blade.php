@@ -22,6 +22,8 @@
 					<th>NISN</th>
 					<th>Alamat</th>
 					<th>Total Pembayaran</th>
+					<th>Total Harus Dibayar</th>
+					<th>Total Kekurangan Pembayaran</th>
 					<th>Aksi</th>
 				</tr>
 				<?php $no=1; ?>
@@ -32,6 +34,8 @@
 						<td><?= $siswa->nisn; ?></td>
 						<td><?= $siswa->alamat; ?></td>
 						<td><?= $siswa->getTotalPembayaran(); ?></td>
+						<td><?= $siswa->getTotalHarusDibayar(); ?></td>
+						<td><?= $siswa->getTotalKekuranganPembayaran(); ?></td>
 						<td>
 							<a href="<?= url("/siswa/detail?id=$siswa->id"); ?>">Detail</a> |
 							<a href="<?= url("/siswa/ubah?id=$siswa->id"); ?>">Ubah</a> |
