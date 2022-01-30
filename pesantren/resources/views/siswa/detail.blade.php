@@ -4,24 +4,6 @@
 @section('content')
 
 
-<?php
-
-use App\Models\Siswa;
-use App\Models\Pembayaran;
-
-$id = $_GET['id'];
-
-$query = Siswa::query();
-$query->where('id','=',$id);
-
-$siswa = $query->first();
-
-$queryPembayaran = Pembayaran::query();
-$queryPembayaran->where('id_siswa','=',$id);
-
-$arrayPembayaran = $queryPembayaran->get();
-
-?>
 <div class="container">
 	<div class="row">
 		<div class="col-6">

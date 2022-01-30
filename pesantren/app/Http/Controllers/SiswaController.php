@@ -2,11 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
+use App\Models\Pembayaran;
 use Illuminate\Routing\Controller;
 
 class SiswaController extends Controller {
 	public function index() {
-		return view('siswa/index');
+
+		$query = Siswa::query();
+		$arraySiswa = $query->get();
+
+		$queryPembayaran = Pembayaran::query();
+		$arrayPembayaran = $queryPembayaran->get();
+		return view('siswa/index', [
+			'arraySiswa' => $arraySiswa,
+			'arrayPembayaran' => $arrayPembayaran,
+		]);
 	}
 
 	public function tambah() {
@@ -29,7 +40,22 @@ class SiswaController extends Controller {
 	}
 
 	public function detail() {
-		return view('siswa/detail');
+		$id = $_GET['id'];
+
+		$query = Siswa::query();
+		$query->where('id','=',$id);
+
+		$siswa = $query->first();
+
+		$queryPembayaran = Pembayaran::query();
+		$queryPembayaran->where('id_siswa','=',$id);
+
+		$arrayPembayaran = $queryPembayaran->get();
+
+		return view('siswa/detail', [
+			'siswa' => $siswa,
+			'arrayPembayaran' => $arrayPembayaran,
+		]);
 	}
 }
 

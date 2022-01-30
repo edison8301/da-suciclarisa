@@ -4,20 +4,6 @@
 @section('content')
 
 
-
-<?php
-
-use App\Models\Siswa;
-use App\Models\Pembayaran;
-
-$query = Siswa::query();
-$arraySiswa = $query->get();
-
-$queryPembayaran = Pembayaran::query();
-$arrayPembayaran = $queryPembayaran->get();
-
-?>
-
 <div class="container">
 	<div class="row">
 		<div class="col-12">
