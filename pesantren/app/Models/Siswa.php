@@ -11,13 +11,12 @@ class Siswa extends Model
 
     protected $table = 'siswa';
 
-    public function helloWorld()
-    {
-        return "Hello World";
-    }
+    public function getArrayPembayaran() {
+        $query = Pembayaran::query();
+        $query->where('id_siswa', '=', $this->id);
 
-    public static function helloWorldStatic()
-    {
-        return "Hello World static";
+        $arrayPembayaran = $query->get();
+
+        return $arrayPembayaran;
     }
 }

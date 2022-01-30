@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Siswa;
 use App\Models\Pembayaran;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 class SiswaController extends Controller {
@@ -39,18 +40,15 @@ class SiswaController extends Controller {
 		return view('siswa/hapus');
 	}
 
-	public function detail() {
-		$id = $_GET['id'];
+	public function detail(Request $request) {
+		$id = $request->get('id');
 
 		$query = Siswa::query();
 		$query->where('id','=',$id);
 
 		$siswa = $query->first();
 
-		$queryPembayaran = Pembayaran::query();
-		$queryPembayaran->where('id_siswa','=',$id);
-
-		$arrayPembayaran = $queryPembayaran->get();
+		$arrayPembayaran = $siswa->getArrayPembayaran();
 
 		return view('siswa/detail', [
 			'siswa' => $siswa,
