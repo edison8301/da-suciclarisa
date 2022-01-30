@@ -8,11 +8,9 @@
 
 		<div class="mb-3">
 			<label class="form-label">Nama</label>
-			<select name="id_siswa">
+			<select name="id_siswa" class="form-control">
 				<?php foreach($arraySiswa as $siswa) { ?>
-					<option value="<?= $siswa->id; ?>">
-						<?= $siswa->nama; ?>
-					</option>
+				<option value="<?= $siswa->id; ?>"> <?= $siswa->nama; ?></option>
 				<?php } ?>
 			</select>
 		</div>

@@ -13,38 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/siswa', function () {
-    return view('siswa/index');
-});
 
-Route::get('/siswa/index', function () {
-    return view('siswa/index');
-});
 
-Route::get('/siswa/hapus', function () {
-    return view('siswa/hapus');
-});
-
-Route::get('/siswa/detail', function () {
-    return view('siswa/detail');
-});
-
-Route::get('/siswa/tambah', function () {
-    return view('siswa/tambah');
-});
-
-Route::get('/siswa/tambah-proses', function () {
-    return view('siswa/tambah-proses');
-});
-
-Route::get('/siswa/ubah', function () {
-    return view('siswa/ubah');
-});
-
-Route::get('/siswa/ubah-proses', function () {
-    return view('siswa/ubah-proses');
-});
-
+Route::get('/siswa/index', [\App\Http\Controllers\SiswaController::class,'index']);
+Route::get('/siswa/hapus', [\App\Http\Controllers\SiswaController::class,'hapus']);
+Route::get('/siswa/detail', [\App\Http\Controllers\SiswaController::class,'detail']);
+Route::get('/siswa/tambah', [\App\Http\Controllers\SiswaController::class,'tambah']);
+Route::get('/siswa/tambah-proses', [\App\Http\Controllers\SiswaController::class,'tambahProses']);
+Route::get('/siswa/ubah', [\App\Http\Controllers\SiswaController::class,'ubah']);
+Route::get('/siswa/ubah-proses', [\App\Http\Controllers\SiswaController::class,'ubahProses']);
 
 //Guru
 

@@ -18,35 +18,29 @@ $pembayaran = $queryPembayaran->first();
 
 <div class="container">
 	<div class="row">
-		<div class="col-12">
+		<div class="col-6">
 
 			<h1>Detail Pembayaran</h1>
 
-
-			<table border="1" cellspacing="0">
+			<table class="table table-bordered">
 				<tr>
 					<td>Id Pembayaran</td>
-					<td>:</td>
 					<td><?= $pembayaran->id_siswa; ?></td>
 				</tr>
 				<tr>
 					<td>Tanggal Pembayaran</td>
-					<td>:</td>
 					<td><?= $pembayaran->tanggal_pembayaran; ?></td>
 				</tr>
 				<tr>
 					<td>Bulan</td>
-					<td>:</td>
 					<td><?= $pembayaran->bulan; ?></td>
 				</tr>
 				<tr>
 					<td>Tahun</td>
-					<td>:</td>
 					<td><?= $pembayaran->tahun; ?></td>
 				</tr>
 				<tr>
 					<td>Jumlah</td>
-					<td>:</td>
 					<td><?= $pembayaran->jumlah; ?></td>
 				</tr>
 			</table>
