@@ -13,11 +13,8 @@ class SiswaController extends Controller {
 		$query = Siswa::query();
 		$arraySiswa = $query->get();
 
-		$queryPembayaran = Pembayaran::query();
-		$arrayPembayaran = $queryPembayaran->get();
 		return view('siswa/index', [
 			'arraySiswa' => $arraySiswa,
-			'arrayPembayaran' => $arrayPembayaran,
 		]);
 	}
 

@@ -19,4 +19,14 @@ class Siswa extends Model
 
         return $arrayPembayaran;
     }
+
+    public function getTotalPembayaran() {
+
+        $query = Pembayaran::query();
+        $query->where('id_siswa', '=', $this->id);
+
+        $arrayPembayaran = $query->get();
+
+        return $arrayPembayaran;
+    }
 }
