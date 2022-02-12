@@ -27,32 +27,37 @@
 					<th>Aksi</th>
 				</tr>
 				<?php $no=1; ?>
-				<?php $total= 0; ?>
+				<?php $totalPembayaran= 0; ?>
+				<?php $totalHarusDibayar= 0; ?>
+				<?php $totalKekuranganPembayaran= 0; ?>
 				<?php foreach ($arraySiswa as $siswa) { ?>
 					<tr>
 						<td><?= $no; ?></td>
 						<td><?= $siswa->nama; ?></td>
 						<td><?= $siswa->nisn; ?></td>
 						<td><?= $siswa->alamat; ?></td>
-						<td>{{ number_format($siswa->getTotalPembayaran())}};</td>
-						<td><?= $siswa->getTotalHarusDibayar(); ?></td>
-						<td><?= $siswa->getTotalKekuranganPembayaran(); ?></td>
+						<td style="text-align: right;"> {{ number_format($siswa->getTotalPembayaran(), 0,',','.') }}</td>
+						<td style="text-align: right;"> {{ number_format($siswa->getTotalHarusDibayar(), 0,',','.') }}</td>
+						<td style="text-align: right;"> {{ number_format($siswa->getTotalKekuranganPembayaran(), 0,',','.') }}</td>
 						<td>
 							<a href="<?= url("/siswa/detail?id=$siswa->id"); ?>">Detail</a> |
 							<a href="<?= url("/siswa/ubah?id=$siswa->id"); ?>">Ubah</a> |
 							<a href="<?= url("/siswa/hapus?id=$siswa->id");  ?>">Hapus</a>
 						</td>
 					</tr>
+				<?php $totalPembayaran = $totalPembayaran+ $siswa->getTotalPembayaran() ; ?>
+				<?php $totalHarusDibayar = $totalHarusDibayar+ $siswa->getTotalHarusDibayar() ; ?>
+				<?php $totalKekuranganPembayaran = $totalKekuranganPembayaran + $siswa->getTotalKekuranganPembayaran() ; ?>
 				<?php $no = $no + 1; ?>
 				<?php } ?>
 			<tr>
 				<th></th>
 				<th>Total</th>
 				<th></th>
-				<th style="text-align: right;"><?= $total + $siswa->getTotalPembayaran() ; ?></th>
-				<th style="text-align: right;"><?= $total + $siswa->getTotalHarusDibayar() ; ?></th>
-				<th style="text-align: right;"><?= $total + $siswa->getTotalKekuranganPembayaran() ; ?></th>
 				<th></th>
+				<th style="text-align: right;"> {{ number_format($totalPembayaran, 0,',','.') }}</th>
+				<th style="text-align: right;"> {{ number_format($totalHarusDibayar, 0,',','.') }}</th>
+				<th style="text-align: right;"> {{ number_format($totalKekuranganPembayaran, 0,',','.') }}</th>
 			</tr>
 			</table>
 			

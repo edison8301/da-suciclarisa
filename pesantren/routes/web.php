@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+//Siswa
 
 Route::get('/siswa/index', [\App\Http\Controllers\SiswaController::class,'index']);
 Route::get('/siswa/hapus', [\App\Http\Controllers\SiswaController::class,'hapus']);
@@ -25,37 +25,23 @@ Route::get('/siswa/ubah-proses', [\App\Http\Controllers\SiswaController::class,'
 
 //Guru
 
-Route::get('/guru', function () {
-    return view('guru/index');
-});
+Route::get('/guru/index', [\App\Http\Controllers\GuruController::class,'index']);
+Route::get('/guru/hapus', [\App\Http\Controllers\GuruController::class,'hapus']);
+Route::get('/guru/detail', [\App\Http\Controllers\GuruController::class,'detail']);
+Route::get('/guru/tambah', [\App\Http\Controllers\GuruController::class,'tambah']);
+Route::get('/guru/tambah-proses', [\App\Http\Controllers\GuruController::class,'tambahProses']);
+Route::get('/guru/ubah', [\App\Http\Controllers\GuruController::class,'ubah']);
+Route::get('/guru/ubah-proses', [\App\Http\Controllers\GuruController::class,'ubahProses']);
 
-Route::get('/guru/index', function () {
-    return view('guru/index');
-});
+//Pembayaran
 
-Route::get('/guru/hapus', function () {
-    return view('guru/hapus');
-});
-
-Route::get('/guru/detail', function () {
-    return view('guru/detail');
-});
-
-Route::get('/guru/tambah', function () {
-    return view('guru/tambah');
-});
-
-Route::get('/guru/tambah-proses', function () {
-    return view('guru/tambah-proses');
-});
-
-Route::get('/guru/ubah', function () {
-    return view('guru/ubah');
-});
-
-Route::get('/guru/update', function () {
-    return view('guru/update');
-});
+Route::get('/pembayaran/index', [\App\Http\Controllers\PembayaranController::class,'index']);
+Route::get('/pembayaran/hapus', [\App\Http\Controllers\PembayaranController::class,'hapus']);
+Route::get('/pembayaran/detail', [\App\Http\Controllers\PembayaranController::class,'detail']);
+Route::get('/pembayaran/tambah', [\App\Http\Controllers\PembayaranController::class,'tambah']);
+Route::get('/pembayaran/tambah-proses', [\App\Http\Controllers\PembayaranController::class,'tambahProses']);
+Route::get('/pembayaran/ubah', [\App\Http\Controllers\PembayaranController::class,'ubah']);
+Route::get('/pembayaran/ubah-proses', [\App\Http\Controllers\PembayaranController::class,'ubahProses']);
 
 
 //Latihan
@@ -77,37 +63,4 @@ Route::get('/latihan4', function () {
 });
 
 
-//Pembayaran
-
-
-Route::get('/pembayaran', function () {
-    return view('pembayaran/index');
-});
-
-Route::get('/pembayaran/index', function () {
-    return view('pembayaran/index');
-});
-
-Route::get('pembayaran/tambah', function () {
-    return view('pembayaran/tambah');
-});
-
-Route::get('pembayaran/tambah-proses', function () {
-    return view('pembayaran/tambah-proses');
-});
-
-Route::get('pembayaran/ubah', function () {
-    return view('pembayaran/ubah');
-});
-
-Route::get('pembayaran/detail', function () {
-    return view('pembayaran/detail');
-});
-
-Route::get('pembayaran/hapus', function () {
-    return view('pembayaran/hapus');
-});
-
-Route::get('pembayaran/ubah-proses', function () {
-    return view('pembayaran/ubah-proses');
-});
+?>
